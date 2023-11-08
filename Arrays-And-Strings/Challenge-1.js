@@ -11,10 +11,10 @@ const uniqueString = (string) => {
   return true;
 };
 
-// console.log(uniqueString('')); // true
-// console.log(uniqueString('happy')); // false
-// console.log(uniqueString('abc')); // true
-// console.log(uniqueString('translate')); // false
+console.log(uniqueString('')); // true
+console.log(uniqueString('happy')); // false
+console.log(uniqueString('abc')); // true
+console.log(uniqueString('translate')); // false
 
 //What if you cannot use additional data structures?
 
