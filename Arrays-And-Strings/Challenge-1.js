@@ -20,9 +20,9 @@ const uniqueString = (string) => {
 
 const uniqueString2 = (string) => {
   const sortedString = string.split('').sort().join('');
-  for (let i = 1; i < sortedString.length - 1; i++) {
-    const character = string[i];
-    const previousCharacter = string[i - 1];
+  for (let i = 1; i <= sortedString.length - 1; i++) {
+    const character = sortedString[i];
+    const previousCharacter = sortedString[i - 1];
     if (character === previousCharacter) {
       return false;
     }
