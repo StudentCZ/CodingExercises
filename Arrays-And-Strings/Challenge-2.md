@@ -9,3 +9,5 @@ Output = false
 
 Input = "abc,cba"\
 Output = true
+
+**Note: if both strings are empty, return true.**
