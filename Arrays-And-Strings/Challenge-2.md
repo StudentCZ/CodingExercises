@@ -4,8 +4,8 @@
 
 ### Examples
 
-Input = "sbd, dbbs"
+Input = "sbd, dbbs"\
 Output = false
 
-Input = "abc,cba"
+Input = "abc,cba"\
 Output = true
