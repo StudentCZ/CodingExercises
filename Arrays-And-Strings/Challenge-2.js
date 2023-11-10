@@ -39,3 +39,9 @@ const permutationChecker2 = (string1, string2) => {
   }
   return true;
 };
+
+console.log(permutationChecker2('', '')); // true
+console.log(permutationChecker2('hashh', 'sahhh')); // true
+console.log(permutationChecker2('a', 'c')); // false
+console.log(permutationChecker2('add', 'abd')); // false
+console.log(permutationChecker2('adsadas', 'xx')); // false
