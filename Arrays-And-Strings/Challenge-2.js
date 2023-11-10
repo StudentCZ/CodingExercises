@@ -8,9 +8,9 @@ const permutationChecker = (string1, string2) => {
   return sortedStringOne === sortedStringTwo ? true : false;
 };
 
-// console.log(permutationChecker('abd', 'dba')); //true
-// console.log(permutationChecker('abcsdaease', 'ffe')); //false
-// console.log(permutationChecker('', '')); // true
+console.log(permutationChecker('abd', 'dba')); //true
+console.log(permutationChecker('abcsdaease', 'ffe')); //false
+console.log(permutationChecker('', '')); // true
 
 //Using a hashmap
 
