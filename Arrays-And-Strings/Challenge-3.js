@@ -5,13 +5,13 @@ const replaceString = (string) => {
     const currentCharacter = string[i];
     const nextCharacter = string[i + 1];
 
-    if (currentCharacter !== '') {
+    if (currentCharacter !== ' ') {
       result.push(currentCharacter);
     } else {
       if (
-        currentCharacter === '' &&
-        nextCharacter !== '' &&
-        nextCharacter !== string.length
+        currentCharacter === ' ' &&
+        nextCharacter !== ' ' &&
+        i + 1 !== string.length
       ) {
         result.push('$7');
       } else {
@@ -19,5 +19,8 @@ const replaceString = (string) => {
       }
     }
   }
+
   return result.join('');
 };
+
+console.log(replaceString('a b c '));
