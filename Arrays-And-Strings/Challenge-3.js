@@ -1,4 +1,4 @@
-const replaceString = (string) => {
+const replaceString = (string, length) => {
   const result = [];
 
   for (let i = 0; i < string.length; i++) {
@@ -23,4 +23,7 @@ const replaceString = (string) => {
   return result.join('');
 };
 
-console.log(replaceString('a b c '));
+console.log(replaceString('')); // ""
+console.log(replaceString('psd0')); // psd0
+console.log(replaceString('a b c '), 6); //a$7b$7c
+console.log(replaceString('a  b d  c f'), 9); //a$7b$7d$7c$7f
