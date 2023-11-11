@@ -23,7 +23,13 @@ const replaceString = (string, length) => {
   return result.join('');
 };
 
-console.log(replaceString('')); // ""
-console.log(replaceString('psd0')); // psd0
-console.log(replaceString('a b c '), 6); //a$7b$7c
-console.log(replaceString('a  b d  c f'), 9); //a$7b$7d$7c$7f
+console.log(replaceString('', 0)); // ""
+console.log(replaceString('psd0', 4)); // psd0
+console.log(replaceString('a b c ', 6)); //a$7b$7c
+console.log(replaceString('a  b d  c f', 9)); //a$7b$7d$7c$7f
+
+// looping from the end
+
+const replaceString2 = (string, length) => {
+  const result = [];
+};
