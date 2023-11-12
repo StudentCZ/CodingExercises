@@ -6,3 +6,5 @@
 
 Input: acer rac
 Output: True (permutation : 'race car, care rac')
+
+**Note: the string will be in lowercase and contains only letter. Do not count spaces.**
