@@ -27,9 +27,3 @@ console.log(replaceString('', 0)); // ""
 console.log(replaceString('psd0', 4)); // psd0
 console.log(replaceString('a b c ', 5)); //a$7b$7c
 console.log(replaceString('a  b d  c f', 9)); //a$7b$7d$7c$7f
-
-// looping from the end and using length arg
-
-const replaceString2 = (string, length) => {
-  const result = [];
-};
