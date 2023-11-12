@@ -1,3 +1,5 @@
+// O(N) time and 0(N) space
+
 const uniqueString = (string) => {
   const dictionary = {};
   for (i = 0; i < string.length; i++) {
@@ -17,6 +19,8 @@ console.log(uniqueString('abc')); // true
 console.log(uniqueString('translate')); // false
 
 //What if you cannot use additional data structures?
+
+//O(N log N) time and O(N) space
 
 const uniqueString2 = (string) => {
   const sortedString = string.split('').sort().join('');
