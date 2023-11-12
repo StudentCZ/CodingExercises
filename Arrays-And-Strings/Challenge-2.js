@@ -1,3 +1,5 @@
+//O(N log N) time complexity and O(N) space complexity
+
 const permutationChecker = (string1, string2) => {
   if (string1.length !== string2.length) {
     return false;
@@ -13,6 +15,8 @@ console.log(permutationChecker('abcsdaease', 'ffe')); //false
 console.log(permutationChecker('', '')); // true
 
 //Using a hashmap
+
+//O(N) time complexity and O(N) space complexity
 
 const permutationChecker2 = (string1, string2) => {
   if (string1.length !== string2.length) {
