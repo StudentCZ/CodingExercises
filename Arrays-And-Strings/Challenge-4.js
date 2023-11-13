@@ -25,3 +25,10 @@ const permutationPalindrome = (string) => {
   }
   return oddCount <= 1;
 };
+
+console.log(permutationPalindrome('')); // true
+console.log(permutationPalindrome('acer rac')); // true
+console.log(permutationPalindrome('aaa')); // true
+console.log(permutationPalindrome('abc')); // false
+console.log(permutationPalindrome('a b p a s d')); // false
+console.log(permutationPalindrome('dede de de')); // true
