@@ -32,6 +32,6 @@ const oneAway = (string1, string2) => {
 
     count += value;
   }
-  console.log(extraCharacterCount);
+
   return count + extraCharacterCount <= 2;
 };
