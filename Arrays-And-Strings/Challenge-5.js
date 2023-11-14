@@ -35,3 +35,11 @@ const oneAway = (string1, string2) => {
 
   return count + extraCharacterCount <= 2;
 };
+
+console.log(oneAway('', '')); // true
+console.log(oneAway('abc', 'ab')); // true
+console.log(oneAway('aaa', 'bbb')); // false
+console.log(oneAway('abc', 'abcdfe')); // false
+console.log(oneAway('sale, ', 'sle')); // true
+console.log(oneAway('melon', 'felon')); // true
+console.log(oneAway('as', 'asdf')); // false
