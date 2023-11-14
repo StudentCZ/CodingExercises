@@ -6,3 +6,6 @@ def unique_string(string):
     else:
       dictionary[character] = True
   return True
+
+print(unique_string('')) # True
+print(unique_string('aab')) # False
