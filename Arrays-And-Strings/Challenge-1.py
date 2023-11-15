@@ -7,8 +7,8 @@ def unique_string(string):
       dictionary[character] = True
   return True
 
-# print(unique_string('')) # True
-# print(unique_string('aab')) # False
+print(unique_string('')) # True
+print(unique_string('aab')) # False
 
 def unique_string2(string):
   sorted_string = ''.join(sorted(string))
@@ -19,4 +19,5 @@ def unique_string2(string):
       return False
   return True
 
-print(unique_string2('happy'))
+print(unique_string2('')) # True
+print(unique_string2('happy')) # False
