@@ -16,4 +16,5 @@ const compressed = (string) => {
   return result.join('').length < string.length ? result.join('') : string;
 };
 
-console.log(compressed('aaaaabcccl'));
+console.log(compressed('aabcccccaaa'));
+console.log(compressed('ab'));
