@@ -1,3 +1,5 @@
+# O(N) time complexity and 0(N) space complexity
+
 def unique_string(string):
   dictionary = {}
   for character in string:
@@ -9,6 +11,8 @@ def unique_string(string):
 
 print(unique_string('')) # True
 print(unique_string('aab')) # False
+
+#O(N log N) time complexity and O(N) space complexity
 
 def unique_string2(string):
   sorted_string = ''.join(sorted(string))
