@@ -1,3 +1,5 @@
+# O(N log N) time complexity and O(N) space complexity
+
 def permutation_checker(string1, string2):
   if len(string1) is not len(string2):
     return False
