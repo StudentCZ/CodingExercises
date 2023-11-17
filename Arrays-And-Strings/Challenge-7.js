@@ -1,3 +1,5 @@
+// O(N^2) time complexity and O(1) space
+
 const rotateImage = (matrix) => {
   const matrixLength = matrix.length;
 
@@ -13,9 +15,3 @@ const rotateImage = (matrix) => {
     matrix[i].reverse();
   }
 };
-
-rotateImage([
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-]);
