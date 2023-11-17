@@ -7,4 +7,5 @@ def permutation_checker(string1, string2):
 
   return sorted_string_one == sorted_string_two
 
-
+print(permutation_checker('sbd','dbbs')) # False
+print(permutation_checker('abc','cba')) # True
