@@ -14,4 +14,13 @@ const rotateImage = (matrix) => {
   for (let i = 0; i < matrixLength; i++) {
     matrix[i].reverse();
   }
+  return matrix;
 };
+
+console.log(
+  rotateImage([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ])
+);
