@@ -31,4 +31,6 @@ def permutation_checker2(string1,string2):
       return False
   return True
 
+print(permutation_checker2('sbd','dbbs')) # False
+print(permutation_checker2('abc','cba')) # True
 
