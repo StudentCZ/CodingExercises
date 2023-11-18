@@ -11,3 +11,24 @@ def permutation_checker(string1, string2):
 
 print(permutation_checker('sbd','dbbs')) # False
 print(permutation_checker('abc','cba')) # True
+
+def permutation_checker2(string1,string2):
+  if len(string1) is not len(string2):
+    return False
+
+  dictionary = {}
+
+  for character in string2:
+    if character in dictionary:
+      dictionary[character] += 1
+    else:
+      dictionary[character] = 1
+
+  for character in string1:
+    if character in dictionary:
+      dictionary[character] -= 1
+    else:
+      return False
+  return True
+
+
