@@ -5,3 +5,6 @@ const isSubString = (string1, string2) => {
   let subStringChecker = `${string1}${string1}`;
   return subStringChecker.includes(string2);
 };
+
+console.log(isSubString('Waterbottle', 'erbottleWat'));
+console.log(isSubString('abc', 'cba'));
