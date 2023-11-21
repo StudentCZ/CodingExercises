@@ -43,6 +43,6 @@ const replaceString2 = (string, trueLength) => {
 };
 
 console.log(replaceString('', 0));
-console.log(replaceString2('psd0', 4));
-console.log(replaceString('a b c ', 5));
-console.log(replaceString('a  b d  c f', 9));
+console.log(replaceString2('psd0', 4)); // psd0
+console.log(replaceString('a b c ', 5)); //a$7b$7c
+console.log(replaceString('a  b d  c f', 9)); //a$7b$7d$7c$7f
