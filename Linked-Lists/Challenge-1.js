@@ -1,6 +1,6 @@
 class Node {
-  constructor(data) {
-    this.data = data;
+  constructor(val) {
+    this.val = val;
     this.next = null;
   }
 }
@@ -16,4 +16,17 @@ node3.next = node4;
 
 const removeDuplicateNodes = (head) => {
   let current = head;
+  const seenValues = new Set();
+  let previous = null;
+
+  while (current !== null) {
+    if (seenValues.has(current.val)) {
+      previous.next = current.next;
+    } else {
+      seenValues.add(current.val);
+      previous = current;
+    }
+    current = current.next;
+  }
+  return head;
 };
