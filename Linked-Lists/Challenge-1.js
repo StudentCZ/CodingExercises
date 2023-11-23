@@ -5,22 +5,13 @@ class Node {
   }
 }
 
-const node1 = new Node('A');
-const node2 = new Node('B');
-const node3 = new Node('A');
-const node4 = new Node('C');
-
-node1.next = node2;
-node2.next = node3;
-node3.next = node4;
-
-function processLinkedList(head) {
+const processLinkedList = (head) => {
   let current = head;
   while (current !== null) {
     console.log(current.val);
     current = current.next;
   }
-}
+};
 
 const createLinkedList = (values) => {
   if (values.length === 0) {
@@ -28,12 +19,16 @@ const createLinkedList = (values) => {
   }
   const head = new Node(values[0]);
   let current = head;
-  for (let i = 0; i < values.length; i++) {
+  for (let i = 1; i < values.length; i++) {
     let newNode = new Node(values[i]);
     current.next = newNode;
     current = newNode;
   }
+  return head;
 };
+
+const values = ['A', 'B', 'C', 'A', 'D'];
+const head = createLinkedList(values);
 
 const removeDuplicateNodes = (head) => {
   let current = head;
@@ -52,5 +47,4 @@ const removeDuplicateNodes = (head) => {
   return head;
 };
 
-removeDuplicateNodes(node1);
-processLinkedList(node1);
+processLinkedList(head);
