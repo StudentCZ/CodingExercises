@@ -47,4 +47,20 @@ const removeDuplicateNodes = (head) => {
   return head;
 };
 
-processLinkedList(head);
+const removeDuplicateNodes2 = (head) => {
+  let current = head;
+
+  while (current !== null) {
+    let runner = current;
+
+    while (runner.next !== null) {
+      if (runner.next.val === current.val) {
+        runner.next = runner.next.next;
+      } else {
+        runner = runner.next;
+      }
+    }
+    current = current.next;
+  }
+  return head;
+};
