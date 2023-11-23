@@ -27,7 +27,7 @@ const createLinkedList = (values) => {
   return head;
 };
 
-const values = ['A', 'B', 'C', 'A', 'D'];
+const values = ['A', 'B', 'C', 'A'];
 const head = createLinkedList(values);
 
 const removeDuplicateNodes = (head) => {
@@ -47,7 +47,9 @@ const removeDuplicateNodes = (head) => {
   return head;
 };
 
-const removeDuplicateNodes2 = (head) => {
+// O(N^2) time complexity and O(1) space complexity
+
+const removeDuplicateNodesWithoutBuffer = (head) => {
   let current = head;
 
   while (current !== null) {
@@ -64,3 +66,6 @@ const removeDuplicateNodes2 = (head) => {
   }
   return head;
 };
+
+removeDuplicateNodes2(head);
+processLinkedList(head);
