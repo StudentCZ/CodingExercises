@@ -22,6 +22,19 @@ function processLinkedList(head) {
   }
 }
 
+const createLinkedList = (values) => {
+  if (values.length === 0) {
+    return null;
+  }
+  const head = new Node(values[0]);
+  let current = head;
+  for (let i = 0; i < values.length; i++) {
+    let newNode = new Node(values[i]);
+    current.next = newNode;
+    current = newNode;
+  }
+};
+
 const removeDuplicateNodes = (head) => {
   let current = head;
   const seenValues = new Set();
