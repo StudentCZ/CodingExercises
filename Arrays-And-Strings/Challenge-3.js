@@ -26,7 +26,7 @@ const replaceString = (string, trueLength) => {
 console.log(replaceString('', 0)); // ""
 console.log(replaceString('psd0', 4)); // psd0
 console.log(replaceString('a b c ', 5)); //a$7b$7c
-console.log(replaceString('a  b d  c f', 9)); //a$7b$7d$7c$7f
+console.log(replaceString('a  b d  c f', 11)); //a$7b$7d$7c$7f
 
 const replaceString2 = (string, trueLength) => {
   const newString = [];
@@ -45,4 +45,4 @@ const replaceString2 = (string, trueLength) => {
 console.log(replaceString('', 0));
 console.log(replaceString2('psd0', 4)); // psd0
 console.log(replaceString('a b c ', 5)); //a$7b$7c
-console.log(replaceString('a  b d  c f', 9)); //a$7b$7d$7c$7f
+console.log(replaceString('a  b d  c f', 11)); //a$7b$7d$7c$7f
