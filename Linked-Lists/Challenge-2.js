@@ -25,4 +25,10 @@ const createLinkedList = (values) => {
     current.next = newNode;
     current = newNode;
   }
+  return head;
 };
+
+const values = [1, 2, 3, 4, 5, 6, 7];
+const head = createLinkedList(values);
+
+processLinkedList(head);
