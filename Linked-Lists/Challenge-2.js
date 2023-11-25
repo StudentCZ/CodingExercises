@@ -5,6 +5,14 @@ class Node {
   }
 }
 
+const processLinkedList = (head) => {
+  let current = head;
+  while (current !== null) {
+    console.log(current.val);
+    current = current.next;
+  }
+};
+
 const createLinkedList = (values) => {
   if (values.length === 0) {
     return null;
