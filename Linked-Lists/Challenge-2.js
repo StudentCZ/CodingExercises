@@ -31,6 +31,8 @@ const createLinkedList = (values) => {
 const values = [1, 2, 3, 4, 5, 6, 7];
 const head = createLinkedList(values);
 
+// Time Complexity: O(N) And Space Complexity: O(1)
+
 const returnKElement = (head, k) => {
   let current = head;
   let lastNodeCount = 0;
