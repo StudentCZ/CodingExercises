@@ -6,3 +6,5 @@
 
 Input: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 k = 2
 Output: 6
+
+**Note: k will always be valid.**
