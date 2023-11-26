@@ -31,4 +31,23 @@ const createLinkedList = (values) => {
 const values = [1, 2, 3, 4, 5, 6, 7];
 const head = createLinkedList(values);
 
-processLinkedList(head);
+const returnKElement = (head, k) => {
+  let current = head;
+  let lastNodeCount = 0;
+  let currentNodeCount = 0;
+
+  while (current !== null) {
+    lastNodeCount += 1;
+    current = current.next;
+  }
+  current = head;
+  while (current !== null) {
+    currentNodeCount += 1;
+    if (lastNodeCount - currentNodeCount === k) {
+      return current.val;
+    }
+    current = current.next;
+  }
+};
+
+returnKElement(head, 1);
