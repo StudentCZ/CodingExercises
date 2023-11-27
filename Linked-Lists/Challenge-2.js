@@ -55,6 +55,8 @@ const returnKElement = (head, k) => {
 
 returnKElement(head, 2);
 
+// Time Complexity: O(N) And Space Complexity: O(1)
+
 const returnKElement2 = (head, k) => {
   let pointerOne = head;
   let pointerTwo = head;
