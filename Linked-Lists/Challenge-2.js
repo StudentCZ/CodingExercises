@@ -45,11 +45,29 @@ const returnKElement = (head, k) => {
   current = head;
   while (current !== null) {
     currentNodeCount += 1;
-    if (lastNodeCount - currentNodeCount === k) {
+    if (lastNodeCount - currentNodeCount === k - 1) {
+      console.log(current.val);
       return current.val;
     }
     current = current.next;
   }
 };
 
-returnKElement(head, 1);
+returnKElement(head, 2);
+
+const returnKElement2 = (head, k) => {
+  let pointerOne = head;
+  let pointerTwo = head;
+
+  for (let i = 0; i < k; i++) {
+    pointerOne = pointerOne.next;
+  }
+  while (pointerOne !== null) {
+    pointerOne = pointerOne.next;
+    pointerTwo = pointerTwo.next;
+  }
+  console.log(pointerTwo.val);
+  return pointerTwo.val;
+};
+
+returnKElement2(head, 2);
