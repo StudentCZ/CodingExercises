@@ -17,3 +17,5 @@ def permutation_palindrome(string):
       odd_count += 1
   return odd_count <= 1
 
+print(permutation_palindrome('acer rac'))
+print(permutation_palindrome('abc'))
