@@ -5,6 +5,14 @@ class Node {
   }
 }
 
+const processLinkedList = (head) => {
+  let current = head;
+  while (current !== null) {
+    console.log(current);
+    current = current.next;
+  }
+};
+
 const createLinkedList = (values) => {
   if (values.length === 0) {
     return null;
@@ -68,3 +76,4 @@ const deleteMiddleNode2 = (head) => {
 };
 
 deleteMiddleNode2(head);
+processLinkedList(head);
