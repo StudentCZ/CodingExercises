@@ -19,7 +19,7 @@ const createLinkedList = (values) => {
   return head;
 };
 
-const values = ['a', 'b', 'c', 'd', 'e', 'f'];
+const values = ['a', 'b', 'c', 'd', 'e'];
 const head = createLinkedList(values);
 
 const deleteMiddleNode = (head) => {
@@ -47,4 +47,24 @@ const deleteMiddleNode = (head) => {
   return head;
 };
 
-deleteMiddleNode(head);
+// deleteMiddleNode(head);
+
+const deleteMiddleNode2 = (head) => {
+  if (head === null || head.next === null) {
+    return null;
+  }
+
+  let pointerOne = head;
+  let pointerTwo = head;
+  let prevPointerOne = null;
+
+  while (pointerTwo !== null && pointerTwo.next !== null) {
+    pointerTwo = pointerTwo.next.next;
+    prevPointerOne = pointerOne;
+    pointerOne = pointerOne.next;
+  }
+  prevPointerOne.next = pointerOne.next;
+  return head;
+};
+
+deleteMiddleNode2(head);
