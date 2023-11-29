@@ -8,7 +8,7 @@ class Node {
 const processLinkedList = (head) => {
   let current = head;
   while (current !== null) {
-    console.log(current);
+    console.log(current.val);
     current = current.next;
   }
 };
@@ -67,9 +67,9 @@ const deleteMiddleNode2 = (head) => {
   let prevPointerOne = null;
 
   while (pointerTwo !== null && pointerTwo.next !== null) {
-    pointerTwo = pointerTwo.next.next;
     prevPointerOne = pointerOne;
     pointerOne = pointerOne.next;
+    pointerTwo = pointerTwo.next.next;
   }
   prevPointerOne.next = pointerOne.next;
   return head;
