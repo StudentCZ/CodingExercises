@@ -38,21 +38,23 @@ const partitionNode = (head, partition) => {
   let rightHead = null;
 
   while (current !== null) {
+    const newNode = new Node(current.val);
+
     if (current.val < partition) {
       if (leftPartition === null) {
-        leftPartition = new Node(current.val);
+        leftPartition = newNode;
         leftHead = leftPartition;
       } else {
-        let next = new Node(current.val);
+        let next = newNode;
         leftPartition.next = next;
         leftPartition = leftPartition.next;
       }
     } else {
       if (rightPartition === null) {
-        rightPartition = new Node(current.val);
+        rightPartition = newNode;
         rightHead = rightPartition;
       } else {
-        let next = new Node(current.val);
+        let next = newNode;
         rightPartition.next = next;
         rightPartition = rightPartition.next;
       }
@@ -62,3 +64,6 @@ const partitionNode = (head, partition) => {
   leftPartition.next = rightHead;
   return leftHead;
 };
+
+let leftHead = partitionNode(head, 5);
+processLinkedList(leftHead);
