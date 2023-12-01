@@ -1,3 +1,5 @@
+# O(N) time complexity and O(N) space complexity
+
 def replace_string(string,true_length):
   new_string = []
 
