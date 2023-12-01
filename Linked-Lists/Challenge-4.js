@@ -62,6 +62,3 @@ const partitionNode = (head, partition) => {
   leftPartition.next = rightHead;
   return leftHead;
 };
-
-const leftHead = partitionNode(head, 5);
-processLinkedList(leftHead, 5);
