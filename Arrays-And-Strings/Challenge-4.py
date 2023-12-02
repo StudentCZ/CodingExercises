@@ -1,3 +1,5 @@
+# Time Complexity: O(N) and Space Complexity: O(C)
+
 def permutation_palindrome(string):
   hash_map = {}
 
