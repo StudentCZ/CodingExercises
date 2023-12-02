@@ -1,4 +1,4 @@
-// time complexity is O(N) and the space complexity is O(1).
+// time complexity is O(N) and the space complexity is O(C).
 
 const permutationPalindrome = (string) => {
   const hashMap = {};
