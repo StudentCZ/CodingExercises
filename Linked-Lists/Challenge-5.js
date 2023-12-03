@@ -4,3 +4,11 @@ class Node {
     this.next = null;
   }
 }
+
+const processLinkedList = (head) => {
+  const current = head;
+  while (current !== null) {
+    console.log(current.val);
+    current = current.next;
+  }
+};
