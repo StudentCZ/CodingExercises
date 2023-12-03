@@ -56,3 +56,6 @@ const sumLinkedList = (headOne, headTwo) => {
   }
   return newHead.next;
 };
+
+let test = sumLinkedList(head1, head2);
+processLinkedList(test);
