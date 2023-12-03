@@ -43,7 +43,7 @@ const sumLinkedList = (headOne, headTwo) => {
     let valueTwo = pointerTwo !== null ? pointerTwo.val : 0;
 
     let sum = valueOne + valueTwo + carry;
-    carry = Math.floor(sum / 10);
+    carry = sum >= 10 ? 1 : 0;
 
     current.next = new Node(sum % 10);
     current = current.next;
