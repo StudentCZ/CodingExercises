@@ -24,3 +24,35 @@ const createLinkedList = (values) => {
   }
   return head;
 };
+
+const values1 = [7, 1, 6];
+const values2 = [5, 9, 2];
+
+let head1 = createLinkedList(values1);
+let head2 = createLinkedList(values2);
+
+const sumLinkedList = (headOne, headTwo) => {
+  let newHead = new Node(0);
+  let current = newHead;
+  let carry = 0;
+  let pointerOne = headOne;
+  let pointerTwo = headTwo;
+
+  while (pointerOne !== null || pointerTwo !== null) {
+    let valueOne = pointerOne !== null ? pointerOne.val : 0;
+    let valueTwo = pointerTwo !== null ? pointerTwo.val : 0;
+
+    let sum = valueOne + valueTwo + carry;
+    carry = Math.floor(sum / 10);
+
+    current.next = new Node(sum % 10);
+    current = current.next;
+    pointerOne = pointerOne.next;
+    pointerTwo = pointerTwo.next;
+  }
+  if (carry === 1) {
+    current.next = new Node(carry);
+    carry = 0;
+  }
+  return newHead.next;
+};
