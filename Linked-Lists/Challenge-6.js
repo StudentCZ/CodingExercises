@@ -26,7 +26,9 @@ const createLinkedList = (values) => {
 };
 
 let values = [1, 2, 2, 1];
+let values2 = ['A', 'B', 'C'];
 let head = createLinkedList(values);
+let head2 = createLinkedList(values2);
 
 const palindromeLinkedList = (head) => {
   let slow = head;
@@ -62,4 +64,5 @@ const reverse = (head) => {
   return previous;
 };
 
-console.log(palindromeLinkedList(head));
+console.log(palindromeLinkedList(head)); //true
+console.log(palindromeLinkedList(head2)); // false
