@@ -24,3 +24,15 @@ const createLinkedList = (values) => {
   }
   return head;
 };
+
+const palindromeLinkedList = (head) => {
+  let slow = head;
+  let fast = head;
+
+  while (fast !== null && fast.next !== null) {
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+
+  let reverseList = reverse(slow.next);
+};
