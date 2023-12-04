@@ -35,6 +35,15 @@ const palindromeLinkedList = (head) => {
   }
 
   let reverseList = reverse(slow.next);
+
+  while (reverseList !== null) {
+    if (head.val !== reverseList.val) {
+      return false;
+    }
+    head = head.next;
+    reverseList.reverseList.next;
+  }
+  return true;
 };
 
 const reverse = (head) => {
