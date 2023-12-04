@@ -12,3 +12,15 @@ const processLinkedList = (head) => {
     current = current.next;
   }
 };
+
+const createLinkedList = (values) => {
+  let head = new Node(values[0]);
+  let current = head;
+
+  for (let i = 1; i < values.length; i++) {
+    let newNode = values[i];
+    current.next = newNode;
+    current = newNode;
+  }
+  return head;
+};
