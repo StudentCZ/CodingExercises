@@ -18,12 +18,15 @@ const createLinkedList = (values) => {
   let current = head;
 
   for (let i = 1; i < values.length; i++) {
-    let newNode = values[i];
+    let newNode = new Node(values[i]);
     current.next = newNode;
     current = newNode;
   }
   return head;
 };
+
+let values = [1, 2, 2, 1];
+let head = createLinkedList(values);
 
 const palindromeLinkedList = (head) => {
   let slow = head;
@@ -41,7 +44,7 @@ const palindromeLinkedList = (head) => {
       return false;
     }
     head = head.next;
-    reverseList.reverseList.next;
+    reverseList = reverseList.next;
   }
   return true;
 };
@@ -56,5 +59,7 @@ const reverse = (head) => {
     previous = current;
     current = temp;
   }
-  return prev;
+  return previous;
 };
+
+console.log(palindromeLinkedList(head));
