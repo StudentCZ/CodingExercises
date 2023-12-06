@@ -55,6 +55,13 @@ n2.next = n3;
 n3.next = n4;
 n4.next = n5;
 
+const head3 = new Node(2);
+const a2 = new Node(2);
+const a3 = new Node(4);
+
+head3.next = a2;
+a2.next = a3;
+
 const getLength = (head) => {
   let length = 0;
 
@@ -86,4 +93,4 @@ const findIntersection = (list1, list2) => {
   return list1;
 };
 
-console.log(findIntersection(head1, head2));
+console.log(findIntersection(head1, head3));
