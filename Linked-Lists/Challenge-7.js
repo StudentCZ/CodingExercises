@@ -5,6 +5,26 @@ class Node {
   }
 }
 
+const createLinkedList = (values, commonNodeIndex = 2) => {
+  if (values.length === 0) {
+    return null;
+  }
+  let head = new Node(values[0]);
+  let current = head;
+  let commonNode = null;
+
+  for (let i = 1; i < values.length; i++) {
+    let newNode = new Node(values[i]);
+    current.next = newNode;
+    current = newNode;
+
+    if (i === commonNodeIndex) {
+      commonNode = current;
+    }
+  }
+  return { head, commonNode };
+};
+
 const getLength = (head) => {
   let length = 0;
   while (head !== null) {
