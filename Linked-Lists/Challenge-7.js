@@ -9,6 +9,7 @@ const createLinkedList = (values, commonNodeIndex = 2) => {
   if (values.length === 0) {
     return null;
   }
+
   let head = new Node(values[0]);
   let current = head;
   let commonNode = null;
@@ -22,11 +23,21 @@ const createLinkedList = (values, commonNodeIndex = 2) => {
       commonNode = current;
     }
   }
+
   return { head, commonNode };
 };
 
+const values1 = [1, 3, 4, 5, 6];
+const values2 = [7, 8, 4, 5, 6];
+
+let head1 = createLinkedList(values1, 2);
+let head2 = createLinkedList(values2, 2);
+
+head2.commonNode = head1.commonNode;
+
 const getLength = (head) => {
   let length = 0;
+
   while (head !== null) {
     length += 1;
     head = head.next;
@@ -54,3 +65,5 @@ const findIntersection = (list1, list2) => {
   }
   return list1;
 };
+
+console.log(findIntersection(head1.head, head2.head));
