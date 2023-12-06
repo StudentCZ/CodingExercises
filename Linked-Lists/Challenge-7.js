@@ -5,35 +5,55 @@ class Node {
   }
 }
 
-const createLinkedList = (values, commonNodeIndex = 2) => {
-  if (values.length === 0) {
-    return null;
-  }
+// const createLinkedList = (values, commonNodeIndex = 2) => {
+//   if (values.length === 0) {
+//     return null;
+//   }
 
-  let head = new Node(values[0]);
-  let current = head;
-  let commonNode = null;
+//   let head = new Node(values[0]);
+//   let current = head;
+//   let commonNode = null;
 
-  for (let i = 1; i < values.length; i++) {
-    let newNode = new Node(values[i]);
-    current.next = newNode;
-    current = newNode;
+//   for (let i = 1; i < values.length; i++) {
+//     let newNode = new Node(values[i]);
+//     current.next = newNode;
+//     current = newNode;
 
-    if (i === commonNodeIndex) {
-      commonNode = current;
-    }
-  }
+//     if (i === commonNodeIndex) {
+//       commonNode = current;
+//     }
 
-  return { head, commonNode };
-};
+//     return { head, commonNode };
+//   }
+// };
 
-const values1 = [1, 3, 4, 5, 6];
-const values2 = [7, 8, 4, 5, 6];
+// const values1 = [1, 3, 4, 5, 6];
+// const values2 = [7, 8, 4, 5, 6];
 
-let head1 = createLinkedList(values1, 2);
-let head2 = createLinkedList(values2, 2);
+// let head1 = createLinkedList(values1, 2);
+// let head2 = createLinkedList(values2, 2);
 
-head2.commonNode = head1.commonNode;
+const head1 = new Node(1);
+const node2 = new Node(3);
+const node3 = new Node(4);
+const node4 = new Node(5);
+const node5 = new Node(6);
+
+head1.next = node2;
+node2.next = node3;
+node3.next = node4;
+node4.next = node5;
+
+const head2 = new Node(7);
+const n2 = new Node(8);
+const n3 = node3;
+const n4 = node4;
+const n5 = node5;
+
+head2.next = n2;
+n2.next = n3;
+n3.next = n4;
+n4.next = n5;
 
 const getLength = (head) => {
   let length = 0;
@@ -66,4 +86,4 @@ const findIntersection = (list1, list2) => {
   return list1;
 };
 
-console.log(findIntersection(head1.head, head2.head));
+console.log(findIntersection(head1, head2));
