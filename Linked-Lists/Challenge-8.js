@@ -5,7 +5,7 @@ class Node {
   }
 }
 
-const createLinkedListWithLoop = (values, loopNodeIndex = 2) => {
+const createLinkedListWithLoop = (values, loopNodeIndex) => {
   let head = new Node(values[0]);
   let current = head;
   let loopNode = null;
@@ -27,22 +27,24 @@ const createLinkedListWithLoop = (values, loopNodeIndex = 2) => {
 
 // Example usage:
 const values = ['A', 'B', 'C', 'D', 'E'];
-const head = createLinkedListWithLoop(values);
+const head = createLinkedListWithLoop(values, 2);
 
 const detectLoop = (head) => {
   let slow = head;
   let fast = head;
 
   while (fast !== null && fast.next !== null) {
+    console.log(`slow: ${slow.val} fast: ${fast.val}`);
     slow = slow.next;
-    console.log(slow.next);
     fast = fast.next.next;
 
     if (slow === fast) {
+      console.log(`found loop slow: ${slow.val} fast: ${fast.val}`);
       break;
     }
   }
   if (fast === null || fast.next === null) {
+    console.log('did not find loop');
     return null;
   }
   fast = head;
@@ -54,4 +56,4 @@ const detectLoop = (head) => {
   return slow;
 };
 
-console.log(detectLoop(head));
+detectLoop(head);
