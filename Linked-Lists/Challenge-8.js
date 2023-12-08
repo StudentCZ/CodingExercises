@@ -5,20 +5,29 @@ class Node {
   }
 }
 
-const createLinkedList = (values) => {
+const createLinkedListWithLoop = (values, loopNodeIndex = 2) => {
   let head = new Node(values[0]);
   let current = head;
+  let loopNode = null;
 
-  for (let i = 0; i < values.length; i++) {
+  for (let i = 1; i < values.length; i++) {
     let newNode = new Node(values[i]);
     current.next = newNode;
     current = newNode;
+
+    if (i === loopNodeIndex) {
+      loopNode = newNode;
+    }
   }
+
+  current.next = loopNode;
+
   return head;
 };
 
-const values = ['A', 'B', 'C', 'D', 'E', 'C'];
-const head = createLinkedList(values);
+// Example usage:
+const values = ['A', 'B', 'C', 'D', 'E'];
+const head = createLinkedListWithLoop(values);
 
 const detectLoop = (head) => {
   let slow = head;
@@ -26,6 +35,7 @@ const detectLoop = (head) => {
 
   while (fast !== null && fast.next !== null) {
     slow = slow.next;
+    console.log(slow.next);
     fast = fast.next.next;
 
     if (slow === fast) {
@@ -43,3 +53,5 @@ const detectLoop = (head) => {
   }
   return slow;
 };
+
+console.log(detectLoop(head));
