@@ -34,17 +34,14 @@ const detectLoop = (head) => {
   let fast = head;
 
   while (fast !== null && fast.next !== null) {
-    console.log(`slow: ${slow.val} fast: ${fast.val}`);
     slow = slow.next;
     fast = fast.next.next;
 
     if (slow === fast) {
-      console.log(`found loop slow: ${slow.val} fast: ${fast.val}`);
       break;
     }
   }
   if (fast === null || fast.next === null) {
-    console.log('did not find loop');
     return null;
   }
   fast = head;
