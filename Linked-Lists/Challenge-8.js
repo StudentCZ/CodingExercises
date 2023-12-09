@@ -25,7 +25,6 @@ const createLinkedListWithLoop = (values, loopNodeIndex) => {
   return head;
 };
 
-// Example usage:
 const values = ['A', 'B', 'C', 'D', 'E'];
 const head = createLinkedListWithLoop(values, 2);
 
@@ -37,9 +36,7 @@ const detectLoop = (head) => {
     slow = slow.next;
     fast = fast.next.next;
 
-    if (slow === fast) {
-      break;
-    }
+    1;
   }
   if (fast === null || fast.next === null) {
     return null;
