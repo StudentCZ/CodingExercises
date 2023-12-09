@@ -1,3 +1,5 @@
+//O(N*M) time complexity and 0(N*M) space complexity
+
 const zeroMatrix = (matrix) => {
   const rows = matrix.length;
   const columns = matrix[0].length;
