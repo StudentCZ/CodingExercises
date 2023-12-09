@@ -1,3 +1,5 @@
+// O(N) time complexity and 0(N) space complexity
+
 const compressed = (string) => {
   let pointerOne = 0;
   let pointerTwo = 1;
