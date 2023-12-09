@@ -1,3 +1,5 @@
+// O(Max(N, M)) time complexity and O(N+M) space complexity
+
 const oneAway = (string1, string2) => {
   if (Math.abs(string1.length - string2.length) > 1) {
     return false;
