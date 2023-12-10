@@ -24,3 +24,6 @@ def one_away(string1,string2):
     count += value
 
   return count + extra_character_count <= 2
+
+print(one_away('abc', 'ab')) # True
+print(one_away('aaa', 'bbb')) # False
