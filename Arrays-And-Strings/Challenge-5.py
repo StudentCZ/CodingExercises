@@ -1,3 +1,5 @@
+# O(Max(N, M)) time complexity and O(N+M) space complexity
+
 def one_away(string1,string2):
   if abs(len(string1) - len(string2) > 1):
     return False
