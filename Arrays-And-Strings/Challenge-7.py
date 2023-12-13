@@ -1,3 +1,5 @@
+# O(N^2) time complexity and O(1) space
+
 def rotate_image(matrix):
   matrix_length = len(matrix)
 

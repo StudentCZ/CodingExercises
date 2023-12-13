@@ -1,3 +1,5 @@
+# O(N*M) time complexity and 0(N*M) space complexity
+
 def zero_matrix(matrix):
   rows, cols = len(matrix), len(matrix[0])
   zero_rows, zero_cols = set(), set()

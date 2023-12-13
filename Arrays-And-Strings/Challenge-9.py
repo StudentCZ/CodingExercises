@@ -1,3 +1,5 @@
+# 0(N) time complexity and 0(N) space complexity
+
 def is_substring(string1,string2):
   if len(string1) != len(string2):
     return False
