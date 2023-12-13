@@ -3,6 +3,27 @@ class Node:
     self.val = val
     self.next = None
 
+def print_linked_list(head):
+  current = head
+  while current is not None:
+    print(current.val)
+    current = current.next
+
+
+head = Node('A')
+node2 = Node('B')
+node3 = Node('C')
+node4 = Node('D')
+node5 = Node('A')
+node6 = Node('E')
+
+head.next = node2
+node2.next = node3
+node3.next = node4
+node4.next = node5
+node5.next = node6
+
+
 def remove_duplicate(head):
   current = head
   tracker = set()
@@ -14,3 +35,5 @@ def remove_duplicate(head):
       tracker.add(current.val)
       current = current.next
   return head
+
+print(print_linked_list(head))
