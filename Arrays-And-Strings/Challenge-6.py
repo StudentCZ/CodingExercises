@@ -1,3 +1,5 @@
+# O(N) time complexity and 0(N) space complexity
+
 def compressed(string):
     result = []
     pointer_one = 0
