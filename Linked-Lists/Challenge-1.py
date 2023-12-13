@@ -11,11 +11,11 @@ def print_linked_list(head):
 
 
 head = Node('A')
-node2 = Node('B')
-node3 = Node('A')
-node4 = Node('C')
-node5 = Node('A')
-node6 = Node('A')
+node2 = Node('E')
+node3 = Node('C')
+node4 = Node('D')
+node5 = Node('B')
+node6 = Node('E')
 
 head.next = node2
 node2.next = node3
@@ -34,8 +34,6 @@ def remove_duplicate(head):
     else:
       current = current.next
   return head
-
-# print(print_linked_list(head))
 
 new_head = remove_duplicate(head)
 
