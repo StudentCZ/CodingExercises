@@ -12,10 +12,10 @@ def print_linked_list(head):
 
 head = Node('A')
 node2 = Node('B')
-node3 = Node('C')
-node4 = Node('D')
+node3 = Node('A')
+node4 = Node('C')
 node5 = Node('A')
-node6 = Node('E')
+node6 = Node('A')
 
 head.next = node2
 node2.next = node3
@@ -28,12 +28,15 @@ def remove_duplicate(head):
   current = head
   tracker = set()
   while current is not None and current.next is not None:
+    tracker.add(current.val)
     if current.next.val in tracker:
       current.next = current.next.next
-      current = current.next
     else:
-      tracker.add(current.val)
       current = current.next
   return head
 
-print(print_linked_list(head))
+# print(print_linked_list(head))
+
+new_head = remove_duplicate(head)
+
+print(print_linked_list(new_head))
