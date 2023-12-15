@@ -22,4 +22,25 @@ def create_linked_list(values):
 
 values = ['A','B','C','D','E']
 head = create_linked_list(values)
-print_linked_list(head)
+
+def delete_middle_node(head):
+  pointer_one = head
+  pointer_two = head
+  previous_node = None
+
+
+  while pointer_two is not None and pointer_two.next is not None:
+    previous_node = pointer_one
+    pointer_one = pointer_one.next
+    pointer_two = pointer_two.next.next
+
+  if previous_node:
+    previous_node.next = pointer_one.next
+  else:
+    head = pointer_one.next
+
+  return head
+
+newhead = delete_middle_node(head)
+print_linked_list(newhead)
+
