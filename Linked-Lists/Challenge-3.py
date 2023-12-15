@@ -1,7 +1,7 @@
 class Node:
   def __init__(self,val) -> None:
     self.val = val
-    self.next = next
+    self.next = None
 
 
 def print_linked_list(head):
@@ -20,3 +20,6 @@ def create_linked_list(values):
     current = new_node
   return head
 
+values = ['A','B','C','D','E']
+head = create_linked_list(values)
+print_linked_list(head)
