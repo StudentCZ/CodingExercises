@@ -19,6 +19,35 @@ def create_linked_list(values):
     current = new_node
   return head
 
-values = ['1','2','3']
-head = create_linked_list(values)
+
+value1 = [7,1,6]
+value2 = [5,9,2]
+head1 = create_linked_list(value1)
+head2 = create_linked_list(value2)
+
+def sum_linked_list(head1,head2):
+  new_head = Node(0)
+  current = new_head
+  carry = 0
+  pointer_one = head1
+  pointer_two = head2
+
+  while pointer_one is not None or pointer_two is not None:
+    value1 = pointer_one.val if pointer_one else 0
+    value2 = pointer_two.val if pointer_two else 0
+
+    sum = value1 + value2 + carry
+    carry = 0 if sum < 10 else 1
+    current.next = Node(sum % 10)
+    current = current.next
+
+    pointer_one = pointer_one.next
+    pointer_two = pointer_two.next
+
+  if carry == 1:
+    current.next = Node(carry)
+    current = current.next
+  return new_head.next
+
+head = sum_linked_list(head1,head2)
 print_linked_list(head)
