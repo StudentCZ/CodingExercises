@@ -41,8 +41,8 @@ def sum_linked_list(head1,head2):
     current.next = Node(sum % 10)
     current = current.next
 
-    pointer_one = pointer_one.next
-    pointer_two = pointer_two.next
+    pointer_one = pointer_one.next if pointer_one else None
+    pointer_two = pointer_two.next if pointer_two else None
 
   if carry == 1:
     current.next = Node(carry)
