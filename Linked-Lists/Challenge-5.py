@@ -10,11 +10,15 @@ def print_linked_list(head):
     current = current.next
 
 def create_linked_list(values):
-  head = Node[values[0]]
+  head = Node(values[0])
   current = head
 
   for value in values[1:]:
-    new_node = Node[value]
+    new_node = Node(value)
     current.next = new_node
     current = new_node
   return head
+
+values = ['1','2','3']
+head = create_linked_list(values)
+print_linked_list(head)
