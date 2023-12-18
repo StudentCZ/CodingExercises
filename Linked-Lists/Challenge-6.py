@@ -20,7 +20,9 @@ def create_linked_list(values):
   return head
 
 values = ["A",'B','B','A']
+values2 = ["A",'B','B']
 head = create_linked_list(values)
+head2 = create_linked_list(values2)
 
 def reverse(head):
   current = head
@@ -53,5 +55,7 @@ def palindrome_linked_list(head):
   return True
 
 result = palindrome_linked_list(head)
+result2 = palindrome_linked_list(head2)
 print(result)
+print(result2)
 
