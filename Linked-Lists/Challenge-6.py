@@ -9,3 +9,13 @@ def print_linked_list(head):
     print(current.val)
     current = current.next
 
+def create_linked_list(values):
+  head = Node(values[0])
+  current = head
+
+  for value in values[1:]:
+    new_node = Node(value)
+    current.next = new_node
+    current = new_node
+  return head
+
