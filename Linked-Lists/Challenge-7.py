@@ -38,7 +38,22 @@ def intersect_linked_list(head1,head2):
 
   head_one_length = get_length(pointer_one)
   head_two_length = get_length(pointer_two)
-  print(head_one_length)
-  print(head_two_length)
 
+  while (head_one_length > head_two_length):
+    head_one_length -= 1
+    pointer_one = pointer_one.next
 
+  while (head_two_length > head_one_length):
+    head_two_length -= 1
+    pointer_two = pointer_two.next
+
+  while pointer_one is not None:
+    if (pointer_one == pointer_two):
+      return True
+    pointer_one = pointer_one.next
+    pointer_two = pointer_two.next
+
+  return False
+
+result = intersect_linked_list(head1,head2)
+print(result)
