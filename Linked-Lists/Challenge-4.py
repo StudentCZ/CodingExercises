@@ -21,6 +21,7 @@ def create_linked_list(values):
 values = [1,8,10,4,5,6,3,2]
 head = create_linked_list(values)
 
+# 0(N) Time Complexity and 0(N) Space Complexity
 
 def partition_node(head, partition):
   current = head
