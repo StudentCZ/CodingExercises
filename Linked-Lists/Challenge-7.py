@@ -32,6 +32,8 @@ head2 = Node('S')
 node_a2 = node4
 head2.next = node_a2
 
+# 0(N+M)Time Complexity And 0(1) Space Complexity
+
 def intersect_linked_list(head1,head2):
   pointer_one = head1
   pointer_two = head2
