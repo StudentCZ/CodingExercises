@@ -25,6 +25,8 @@ value2 = [5,9,2]
 head1 = create_linked_list(value1)
 head2 = create_linked_list(value2)
 
+# 0(Max(N,M))Time Complexity 0(Max(N,M))Space Complexity
+
 def sum_linked_list(head1,head2):
   new_head = Node(0)
   current = new_head
