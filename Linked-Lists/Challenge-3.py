@@ -23,6 +23,8 @@ def create_linked_list(values):
 values = ['A','B','C','D','E']
 head = create_linked_list(values)
 
+# O(N) Time Complexity and 0(1) Space Complexity
+
 def delete_middle_node(head):
   pointer_one = head
   pointer_two = head
