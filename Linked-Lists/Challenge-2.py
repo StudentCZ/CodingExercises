@@ -24,6 +24,7 @@ def create_linked_list(values):
 values = ['1','2','3','4','5','6']
 head = create_linked_list(values)
 
+# 0(N) Time Complexity and 0(1) Space Complexity
 
 def return_k_element(head,k):
   pointer_one = head
