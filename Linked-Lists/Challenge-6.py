@@ -35,6 +35,7 @@ def reverse(head):
     current = next
   return prev
 
+# 0(N)Time Complexity And 0(1) Space Complexity
 
 def palindrome_linked_list(head):
   current = head
