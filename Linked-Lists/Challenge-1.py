@@ -23,6 +23,7 @@ node3.next = node4
 node4.next = node5
 node5.next = node6
 
+# O(N) Time Complexity and 0(N) Space Complexity
 
 def remove_duplicate(head):
   current = head
