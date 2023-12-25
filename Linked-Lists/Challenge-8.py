@@ -8,3 +8,5 @@ def print_linked_list(head):
   while current is not None:
     print(current.val)
     current = current.next
+
+def detect_loop(head):
