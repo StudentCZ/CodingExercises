@@ -20,7 +20,9 @@ const createLinkedListWithLoop = (values, loopNodeIndex) => {
     }
   }
 
-  current.next = loopNode;
+  if (loopNode !== null) {
+    current.next = loopNode;
+  }
 
   return head;
 };
@@ -35,12 +37,12 @@ const detectLoop = (head) => {
   while (fast !== null && fast.next !== null) {
     slow = slow.next;
     fast = fast.next.next;
-
-    1;
   }
+
   if (fast === null || fast.next === null) {
     return null;
   }
+
   fast = head;
 
   while (slow !== fast) {
@@ -50,4 +52,4 @@ const detectLoop = (head) => {
   return slow;
 };
 
-detectLoop(head);
+console.log(detectLoop(head));
