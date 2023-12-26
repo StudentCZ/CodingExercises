@@ -22,7 +22,6 @@ node_3.next = node_4
 node_4.next = node_5
 node_5.next = node_6
 
-print_linked_list(head)
 
 def detect_loop(head):
   slow = head
@@ -41,3 +40,4 @@ def detect_loop(head):
     fast = fast.next
   return slow
 
+print(detect_loop(head))
