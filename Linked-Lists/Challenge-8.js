@@ -5,7 +5,7 @@ class Node {
   }
 }
 
-const createLinkedListWithLoop = (values, loopNodeIndex) => {
+const createLinkedListWithLoop = (values, loopNodeIndex = 2) => {
   let head = new Node(values[0]);
   let current = head;
   let loopNode = null;
@@ -52,4 +52,6 @@ const detectLoop = (head) => {
   return slow;
 };
 
-console.log(detectLoop(head));
+const result = detectLoop(head);
+
+console.log(result);
