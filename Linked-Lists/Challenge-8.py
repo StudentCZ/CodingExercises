@@ -24,20 +24,23 @@ node_5.next = node_6
 
 
 def detect_loop(head):
-  slow = head
-  fast = head
+    slow = head
+    fast = head
 
-  while fast is not None and fast.next is not None:
-    slow = slow.next
-    fast = fast.next.next
+    while fast is not None and fast.next is not None:
+        slow = slow.next
+        fast = fast.next.next
 
-  if fast is None or fast.next is None:
-    return None
-  fast = head
+        if fast == slow:
+           break
 
-  while slow != fast:
-    slow = slow.next
-    fast = fast.next
-  return slow
+    if fast is None or fast.next is None:
+        return None
+    fast = head
 
-print(detect_loop(head))
+    while slow != fast:
+        slow = slow.next
+        fast = fast.next
+
+    return slow
+
