@@ -5,3 +5,7 @@ const tripleStack = (array) => {
   const secondStack = array.slice(length, 2 * length);
   const thirdStack = array.slice(2 * length);
 };
+
+const push = (stackNumber, value) => {};
+
+const pop = (stackNumber) => {};
