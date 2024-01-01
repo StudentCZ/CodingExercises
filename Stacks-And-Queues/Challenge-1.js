@@ -20,4 +20,15 @@ const tripleStack = (array) => {
       console.log(`Stack ${stackNumber + 1} is empty. Cannot pop.`);
     }
   };
+
+  const inspect = () => ({ array, top });
+  return { push, pop, inspect };
 };
+
+const stacks = tripleStack(new Array(9));
+
+stacks.push(0, 1);
+stacks.push(1, 2);
+stacks.push(2, 3);
+
+console.log(stacks.inspect());
