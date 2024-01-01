@@ -28,7 +28,10 @@ const tripleStack = (array) => {
 const stacks = tripleStack(new Array(9));
 
 stacks.push(0, 1);
+stacks.push(0, 4);
 stacks.push(1, 2);
+stacks.push(1, 5);
 stacks.push(2, 3);
+stacks.push(2, 6);
 
 console.log(stacks.inspect());
