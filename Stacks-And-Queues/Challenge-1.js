@@ -35,3 +35,11 @@ stacks.push(2, 3);
 stacks.push(2, 6);
 
 console.log(stacks.inspect());
+
+class TripleStack {
+  constructor(array) {
+    this.length = Math.floor(array.length / 3);
+    this.top = [0, this.length, 2 * this.length];
+    this.array = array;
+  }
+}
