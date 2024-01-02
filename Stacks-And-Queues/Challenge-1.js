@@ -50,4 +50,13 @@ class TripleStack {
       console.log(`Stack ${stackNumber + 1} is full. Cannot push ${value}.`);
     }
   }
+  pop(stackNumber) {
+    if (this.top[stackNumber] > stackNumber * this.length) {
+      const value = this.array[this.top[stackNumber]];
+      this.top[stackNumber]--;
+      return value;
+    } else {
+      console.log(`Stack ${stackNumber + 1} is empty. Cannot pop.`);
+    }
+  }
 }
