@@ -42,4 +42,12 @@ class TripleStack {
     this.top = [0, this.length, 2 * this.length];
     this.array = array;
   }
+  push(stackNumber, value) {
+    if (this.top[stackNumber] < (stackNumber + 1) * this.length) {
+      this.array[this.top[stackNumber]] = value;
+      this.top[stackNumber]++;
+    } else {
+      console.log(`Stack ${stackNumber + 1} is full. Cannot push ${value}.`);
+    }
+  }
 }
