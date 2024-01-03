@@ -20,4 +20,12 @@ function createMinStack() {
     }
     return poppedValue;
   }
+  function min() {
+    if (minStack.length === 0) {
+      return undefined;
+    }
+    return minStack[minStack.length - 1];
+  }
+
+  return { push, pop, min };
 }
