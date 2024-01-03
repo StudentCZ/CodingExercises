@@ -29,3 +29,9 @@ function createMinStack() {
 
   return { push, pop, min };
 }
+
+const stack = createMinStack();
+stack.push(6);
+stack.push(3);
+stack.push(4);
+console.log(stack.min());
