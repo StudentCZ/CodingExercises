@@ -9,4 +9,15 @@ function createMinStack() {
       minStack.push(value);
     }
   }
+  function pop() {
+    if (stack.length === 0) {
+      return undefined;
+    }
+    const poppedValue = stack.pop();
+
+    if (poppedValue === minStack[minStack.length - 1]) {
+      minStack.pop();
+    }
+    return poppedValue;
+  }
 }
