@@ -37,7 +37,7 @@ stack.push(4);
 console.log(stack.min());
 
 class CreateMinStack {
-  constructor(stack, minStack) {
+  constructor(stack = [], minStack = []) {
     this.stack = stack;
     this.minStack = minStack;
   }
