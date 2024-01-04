@@ -42,7 +42,7 @@ class CreateMinStack {
     this.minStack = minStack;
   }
   push(value) {
-    stack.push(value);
+    this.stack.push(value);
 
     if (
       this.minStack.length === 0 ||
@@ -61,5 +61,11 @@ class CreateMinStack {
       this.minStack.pop();
     }
     return poppedValue;
+  }
+  min() {
+    if (this.minStack.length === 0) {
+      return undefined;
+    }
+    return this.minStack[this.minStack.length - 1];
   }
 }
