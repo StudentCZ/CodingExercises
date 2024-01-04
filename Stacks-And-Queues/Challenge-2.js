@@ -69,3 +69,12 @@ class CreateMinStack {
     return this.minStack[this.minStack.length - 1];
   }
 }
+
+const myMinStack = new CreateMinStack();
+
+myMinStack.push(4);
+myMinStack.push(3);
+myMinStack.push(1);
+myMinStack.push(5);
+
+console.log(myMinStack.min());
