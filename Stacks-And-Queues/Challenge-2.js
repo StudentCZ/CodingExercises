@@ -41,4 +41,14 @@ class CreateMinStack {
     this.stack = stack;
     this.minStack = minStack;
   }
+  push(value) {
+    stack.push(value);
+
+    if (
+      this.minStack.length === 0 ||
+      value <= this.minStack[this.minStack.length - 1]
+    ) {
+      this.minStack.push(value);
+    }
+  }
 }
