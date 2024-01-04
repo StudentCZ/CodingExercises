@@ -51,4 +51,15 @@ class CreateMinStack {
       this.minStack.push(value);
     }
   }
+  pop() {
+    if (this.stack.length === 0) {
+      return undefined;
+    }
+    const poppedValue = this.stack.pop();
+
+    if (poppedValue === this.minStack[this.minStack.length - 1]) {
+      this.minStack.pop();
+    }
+    return poppedValue;
+  }
 }
