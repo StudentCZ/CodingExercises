@@ -22,4 +22,6 @@ function createSetStack(capacity) {
       return undefined;
     }
   }
+
+  return { push, pop };
 }
