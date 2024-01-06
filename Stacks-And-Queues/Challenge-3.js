@@ -57,12 +57,15 @@ class CreateSetStack {
     const currentStack = this.stack[this.stack.length - 1];
 
     if (currentStack.length === 0 && this.stack.length > 1) {
-      this.stacks.pop();
+      this.stack.pop();
     }
     if (this.stack.length > 0) {
       return this.stack[this.stack.length - 1].pop();
     } else {
       return undefined;
     }
+  }
+  inspect() {
+    console.log(this.stack);
   }
 }
