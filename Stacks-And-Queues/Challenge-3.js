@@ -53,4 +53,16 @@ class CreateSetStack {
       this.stack.push([value]);
     }
   }
+  pop() {
+    const currentStack = this.stack[this.stack.length - 1];
+
+    if (currentStack.length === 0 && this.stack.length > 1) {
+      this.stacks.pop();
+    }
+    if (this.stack.length > 0) {
+      return this.stack[this.stack.length - 1].pop();
+    } else {
+      return undefined;
+    }
+  }
 }
