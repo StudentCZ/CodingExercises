@@ -1,43 +1,43 @@
-function createSetStack(capacity) {
-  const stacks = [[]];
+// function createSetStack(capacity) {
+//   const stacks = [[]];
 
-  function push(value) {
-    const currentStack = stacks[stacks.length - 1];
+//   function push(value) {
+//     const currentStack = stacks[stacks.length - 1];
 
-    if (currentStack.length < capacity) {
-      currentStack.push(value);
-    } else {
-      stacks.push([value]);
-    }
-  }
-  function pop() {
-    const currentStack = stacks[stacks.length - 1];
+//     if (currentStack.length < capacity) {
+//       currentStack.push(value);
+//     } else {
+//       stacks.push([value]);
+//     }
+//   }
+//   function pop() {
+//     const currentStack = stacks[stacks.length - 1];
 
-    if (currentStack.length === 0 && stacks.length > 1) {
-      stacks.pop();
-    }
-    if (stacks.length > 0) {
-      return stacks[stacks.length - 1].pop();
-    } else {
-      return undefined;
-    }
-  }
-  function display() {
-    console.log(stacks);
-  }
+//     if (currentStack.length === 0 && stacks.length > 1) {
+//       stacks.pop();
+//     }
+//     if (stacks.length > 0) {
+//       return stacks[stacks.length - 1].pop();
+//     } else {
+//       return undefined;
+//     }
+//   }
+//   function display() {
+//     console.log(stacks);
+//   }
 
-  return { push, pop, display };
-}
+//   return { push, pop, display };
+// }
 
-const setOfStacks = createSetStack(3);
+// const setOfStacks = createSetStack(3);
 
-setOfStacks.push('3');
-setOfStacks.push('2');
-setOfStacks.push('8');
-setOfStacks.push('1');
-setOfStacks.push('4');
+// setOfStacks.push('3');
+// setOfStacks.push('2');
+// setOfStacks.push('8');
+// setOfStacks.push('1');
+// setOfStacks.push('4');
 
-console.log(setOfStacks.display());
+// console.log(setOfStacks.display());
 
 class CreateSetStack {
   constructor(capacity, stacks = [[]]) {
@@ -69,3 +69,14 @@ class CreateSetStack {
     console.log(this.stack);
   }
 }
+
+const stacks = new CreateSetStack(4);
+
+stacks.push(1);
+stacks.push(3);
+stacks.push(5);
+stacks.push(4);
+stacks.push(6);
+stacks.push(8);
+
+console.log(stacks.inspect());
