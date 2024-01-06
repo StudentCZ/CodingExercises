@@ -22,6 +22,19 @@ function createSetStack(capacity) {
       return undefined;
     }
   }
+  function display() {
+    console.log(stacks);
+  }
 
-  return { push, pop };
+  return { push, pop, display };
 }
+
+const setOfStacks = createSetStack(3);
+
+setOfStacks.push('3');
+setOfStacks.push('2');
+setOfStacks.push('8');
+setOfStacks.push('1');
+setOfStacks.push('4');
+
+console.log(setOfStacks.display());
