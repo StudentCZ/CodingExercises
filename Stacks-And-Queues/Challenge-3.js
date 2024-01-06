@@ -44,4 +44,13 @@ class CreateSetStack {
     this.capacity = capacity;
     this.stack = stacks;
   }
+  push(value) {
+    const currentStack = this.stack[this.stack.length - 1];
+
+    if (currentStack.length < this.capacity) {
+      currentStack.push(value);
+    } else {
+      this.stack.push([value]);
+    }
+  }
 }
