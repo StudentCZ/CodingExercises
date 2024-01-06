@@ -38,3 +38,10 @@ setOfStacks.push('1');
 setOfStacks.push('4');
 
 console.log(setOfStacks.display());
+
+class CreateSetStack {
+  constructor(capacity, stacks = [[]]) {
+    this.capacity = capacity;
+    this.stack = stacks;
+  }
+}
