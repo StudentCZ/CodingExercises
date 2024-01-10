@@ -4,5 +4,16 @@ function myQueue() {
   function push(element) {
     stackPush.push(element);
   }
-  function pop() {}
+  function pop() {
+    if (stackPop.length === 0) {
+      while (stackPush.length > 0) {
+        stackPop.push(stackPush.pop());
+      }
+    }
+    if (stackPop.length === 0) {
+      return undefined;
+    }
+    return stackPop.pop();
+  }
+  return { push, pop };
 }
