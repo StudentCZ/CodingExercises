@@ -31,5 +31,8 @@ class MyQueue {
     this.enqueue = enqueue;
     this.dequeue = dequeue;
   }
-  push() {}
+  push(element) {
+    this.enqueue.push(element);
+  }
+  pop() {}
 }
