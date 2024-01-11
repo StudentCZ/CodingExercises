@@ -25,3 +25,11 @@ queue.push(3);
 queue.push(4);
 console.log(queue.pop());
 console.log(queue.pop());
+
+class MyQueue {
+  constructor(enqueue = [], dequeue = []) {
+    this.enqueue = enqueue;
+    this.dequeue = dequeue;
+  }
+  push() {}
+}
