@@ -34,5 +34,15 @@ class MyQueue {
   push(element) {
     this.enqueue.push(element);
   }
-  pop() {}
+  pop() {
+    if (this.dequeue.length === 0) {
+      while (this.enqueue.length > 0) {
+        this.dequeue.push(this.enqueue.pop());
+      }
+    }
+    if (this.enqueue.length === 0) {
+      return undefined;
+    }
+    return this.dequeue.pop();
+  }
 }
