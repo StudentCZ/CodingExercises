@@ -27,22 +27,22 @@ console.log(queue.pop());
 console.log(queue.pop());
 
 class MyQueue {
-  constructor(enqueue = [], dequeue = []) {
-    this.enqueue = enqueue;
-    this.dequeue = dequeue;
+  constructor() {
+    this.stackPush = [];
+    this.stackPop = [];
   }
   push(element) {
-    this.enqueue.push(element);
+    this.stackPush.push(element);
   }
   pop() {
-    if (this.dequeue.length === 0) {
-      while (this.enqueue.length > 0) {
-        this.dequeue.push(this.enqueue.pop());
+    if (this.stackPop.length === 0) {
+      while (this.stackPush.length > 0) {
+        this.stackPop.push(this.stackPush.pop());
       }
     }
-    if (this.enqueue.length === 0) {
+    if (this.stackPush.length === 0) {
       return undefined;
     }
-    return this.dequeue.pop();
+    return this.stackPop.pop();
   }
 }
