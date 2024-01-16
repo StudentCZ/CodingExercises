@@ -17,3 +17,25 @@ function sortStack(mainStack) {
 const unsortedStack = [4, 3, 2, 5, 1];
 sortStack(unsortedStack);
 console.log(unsortedStack);
+
+class SortStack {
+  constructor() {
+    this.mainStack = [];
+    this.tempStack = [];
+  }
+  sort() {
+    while (this.mainStack.length > 0) {
+      const temp = this.mainStack.pop();
+
+      while (
+        this.tempStack.length > 0 &&
+        this.tempStack[this.tempStack.length - 1] > temp
+      ) {
+        this.mainStack.push(this.tempStack.pop());
+      }
+    }
+    while (this.tempStack.length > 0) {
+      this.mainStack.push(this.tempStack.pop());
+    }
+  }
+}
