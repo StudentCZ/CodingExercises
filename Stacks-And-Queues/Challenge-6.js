@@ -5,3 +5,11 @@ class AnimalShelter {
     this.order = 0;
   }
 }
+
+const createAnimalShelter = () => {
+  const state = {
+    dogQueue: [],
+    catQueue: [],
+    order: 0,
+  };
+};
