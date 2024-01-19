@@ -22,6 +22,12 @@ class AnimalShelter {
     }
     return this.dogQueue.shift().animal;
   }
+  dequeueCat() {
+    if (this.catQueue.length === 0) {
+      throw new Error('No cats available for adoption.');
+    }
+    return this.catQueue.shift().animal;
+  }
 }
 
 const createAnimalShelter = () => {
