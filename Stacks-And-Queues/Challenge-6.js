@@ -44,6 +44,15 @@ class AnimalShelter {
   }
 }
 
+const animalShelter = new AnimalShelter();
+
+animalShelter.enqueue('Sam', 'dog');
+animalShelter.enqueue('Alex', 'cat');
+animalShelter.enqueue('Max', 'dog');
+animalShelter.enqueue('Paw', 'cat');
+
+console.log(animalShelter);
+
 const createAnimalShelter = () => {
   const state = {
     dogQueue: [],
