@@ -28,6 +28,20 @@ class AnimalShelter {
     }
     return this.catQueue.shift().animal;
   }
+  dequeueAny() {
+    if (this.dogQueue.length === 0) {
+      return this.dequeueCat();
+    }
+    if (this.catQueue.length === 0) {
+      return this.dequeueDog();
+    }
+    const oldestDog = this.dogQueue[0];
+    const oldestCat = this.catQueue[0];
+
+    return oldestDog.order < oldestCat.order
+      ? this.dequeueDog()
+      : this.dequeueCat();
+  }
 }
 
 const createAnimalShelter = () => {
