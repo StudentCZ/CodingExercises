@@ -51,7 +51,9 @@ animalShelter.enqueue('Alex', 'cat');
 animalShelter.enqueue('Max', 'dog');
 animalShelter.enqueue('Paw', 'cat');
 
-console.log(animalShelter);
+console.log(animalShelter.dequeueDog());
+console.log(animalShelter.dequeueCat());
+console.log(animalShelter.dequeueAny());
 
 const createAnimalShelter = () => {
   const state = {
