@@ -61,4 +61,17 @@ const createAnimalShelter = () => {
     catQueue: [],
     order: 0,
   };
+
+  const enqueue = (animal, type) => {
+    const entry = { animal, type, order: state.order++ };
+    if (type === 'dog') {
+      state.dogQueue.push(entry);
+    } else if (type === 'cat') {
+      state.catQueue.push(entry);
+    } else {
+      throw new Error(
+        'Invalid animal type. Supported types are "dog" and "cat".'
+      );
+    }
+  };
 };
