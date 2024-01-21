@@ -80,4 +80,10 @@ const createAnimalShelter = () => {
     }
     return state.dogQueue.shift().animal;
   };
+  const dequeueCat = () => {
+    if (state.catQueue.length === 0) {
+      throw new Error('No cats available for adoption.');
+    }
+    return state.catQueue.shift().animal;
+  };
 };
