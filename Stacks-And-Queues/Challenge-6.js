@@ -111,4 +111,4 @@ animalShelter2.enqueue('Mark', 'dog');
 animalShelter2.enqueue('Lola', 'cat');
 animalShelter2.enqueue('Steve', 'cat');
 animalShelter2.enqueue('Mary', 'dog');
-console.log(animalShelter2.getState());
+console.log(animalShelter2.dequeueAny());
