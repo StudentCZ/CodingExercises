@@ -44,16 +44,16 @@ class AnimalShelter {
   }
 }
 
-const animalShelter = new AnimalShelter();
+// const animalShelter = new AnimalShelter();
 
-animalShelter.enqueue('Sam', 'dog');
-animalShelter.enqueue('Alex', 'cat');
-animalShelter.enqueue('Max', 'dog');
-animalShelter.enqueue('Paw', 'cat');
+// animalShelter.enqueue('Sam', 'dog');
+// animalShelter.enqueue('Alex', 'cat');
+// animalShelter.enqueue('Max', 'dog');
+// animalShelter.enqueue('Paw', 'cat');
 
-console.log(animalShelter.dequeueDog());
-console.log(animalShelter.dequeueCat());
-console.log(animalShelter.dequeueAny());
+// console.log(animalShelter.dequeueDog());
+// console.log(animalShelter.dequeueCat());
+// console.log(animalShelter.dequeueAny());
 
 const createAnimalShelter = () => {
   const state = {
@@ -97,4 +97,18 @@ const createAnimalShelter = () => {
 
     return oldestCat.order < oldestDog.order ? dequeueCat() : dequeueDog();
   };
+  const getState = () => {
+    return {
+      dogQueue: [...state.dogQueue],
+      catQueue: [...state.catQueue],
+    };
+  };
+  return { enqueue, dequeueDog, dequeueCat, dequeueAny, getState };
 };
+
+const animalShelter2 = createAnimalShelter();
+animalShelter2.enqueue('Mark', 'dog');
+animalShelter2.enqueue('Lola', 'cat');
+animalShelter2.enqueue('Steve', 'cat');
+animalShelter2.enqueue('Mary', 'dog');
+console.log(animalShelter2.getState());
