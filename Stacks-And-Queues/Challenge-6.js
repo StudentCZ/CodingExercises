@@ -74,4 +74,10 @@ const createAnimalShelter = () => {
       );
     }
   };
+  const dequeueDog = () => {
+    if (state.dogQueue.length === 0) {
+      throw new Error('No dogs available for adoption.');
+    }
+    return state.dogQueue.shift().animal;
+  };
 };
