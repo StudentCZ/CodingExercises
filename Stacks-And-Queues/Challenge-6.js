@@ -86,4 +86,15 @@ const createAnimalShelter = () => {
     }
     return state.catQueue.shift().animal;
   };
+  const dequeueAny = () => {
+    if (state.catQueue.length === 0) {
+      return dequeueDog();
+    } else if (state.dogQueue.length === 0) {
+      return dequeueCat();
+    }
+    const oldestCat = state.catQueue[0];
+    const oldestDog = state.dogQueue[0];
+
+    return oldestCat.order < oldestDog.order ? dequeueCat() : dequeueDog();
+  };
 };
