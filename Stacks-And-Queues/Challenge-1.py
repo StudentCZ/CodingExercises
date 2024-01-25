@@ -18,3 +18,6 @@ class TripleStack:
       self.array[index] = None
       self.top[stack_number] -= 1
       return value
+    else:
+       print(f"Stack {stack_number} is empty.")
+
