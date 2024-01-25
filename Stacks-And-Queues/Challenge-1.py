@@ -35,4 +35,6 @@ stack.append(0,10)
 stack.append(1,9)
 stack.append(2,8)
 
-print(stack.peek(0))
+print(stack.peek(2))
+print(stack.pop(2))
+print(stack.peek(2))
