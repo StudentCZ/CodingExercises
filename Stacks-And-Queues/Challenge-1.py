@@ -4,7 +4,7 @@ class TripleStack:
     self.array = [None] * (stack_size * 3)
     self.top = [0,0,0]
 
-  def push(self, stack_number, value):
+  def append(self, stack_number, value):
     if self.top[stack_number] < self.stack_size:
       index = stack_number * self.stack_size + self.top[stack_number]
       self.array[index] = value
@@ -27,3 +27,12 @@ class TripleStack:
     else:
       print(f"Stack {stack_number} is empty.")
 
+stack = TripleStack(stack_size=3)
+stack.append(0,1)
+stack.append(1,3)
+stack.append(2,5)
+stack.append(0,10)
+stack.append(1,9)
+stack.append(2,8)
+
+print(stack.peek(0))
