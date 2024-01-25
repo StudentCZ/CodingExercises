@@ -20,4 +20,10 @@ class TripleStack:
       return value
     else:
        print(f"Stack {stack_number} is empty.")
+  def peek(self, stack_number):
+    if self.top[stack_number] > 0 :
+      index = stack_number * self.stack_size + self.top[stack_number] - 1
+      return self.array[index]
+    else:
+      print(f"Stack {stack_number} is empty.")
 
