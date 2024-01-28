@@ -6,3 +6,10 @@ class MinStack:
     self.stack.append(value)
     if len(self.min_stack) == 0 or value <= self.min_stack[-1]:
       self.min_stack.append(value)
+  def pop(self):
+    if len(self.stack) == 0:
+      return None
+    pop_value = self.stack.pop()
+    while len(self.min_stack) > 0 and pop_value == self.min_stack[-1]:
+      self.min_stack.pop()
+    return pop_value
