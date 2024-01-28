@@ -13,3 +13,7 @@ class MinStack:
     while len(self.min_stack) > 0 and pop_value == self.min_stack[-1]:
       self.min_stack.pop()
     return pop_value
+  def min(self):
+    if len(self.min_stack) == 0:
+      return None
+    return self.min_stack[-1]
