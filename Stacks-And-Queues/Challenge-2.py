@@ -18,10 +18,10 @@ class MinStack:
       return None
     return self.min_stack[-1]
   def display_stack(self):
-    print("Stack", self.stack)
+    print("Stack", self.stack ,'Min', self.min() )
 
 stack = MinStack()
 stack.push(5)
 stack.push(2)
 stack.push(3)
-print(stack)
+stack.display_stack()
