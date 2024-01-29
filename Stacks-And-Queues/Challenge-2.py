@@ -17,6 +17,8 @@ class MinStack:
     if len(self.min_stack) == 0:
       return None
     return self.min_stack[-1]
+  def display_stack(self):
+    print("Stack", self.stack)
 
 stack = MinStack()
 stack.push(5)
