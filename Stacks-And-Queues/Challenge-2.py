@@ -17,3 +17,9 @@ class MinStack:
     if len(self.min_stack) == 0:
       return None
     return self.min_stack[-1]
+
+stack = MinStack()
+stack.push(5)
+stack.push(2)
+stack.push(3)
+print(stack)
