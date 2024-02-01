@@ -9,3 +9,11 @@ class SetOfStacks:
       self.current_stack = [item]
     else:
       self.current_stack.append(item)
+  def pop(self):
+    if not self.stack and not self.current_stack:
+      raise IndexError("pop from an empty SetOfStacks")
+
+    if not self.current_stack:
+      self.current_stack = self.stack.pop()
+
+    return self.current_stack.pop()
