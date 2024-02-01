@@ -17,3 +17,16 @@ class SetOfStacks:
       self.current_stack = self.stack.pop()
 
     return self.current_stack.pop()
+  def show_stack(self):
+    print(self.stack)
+
+
+set_of_stacks = SetOfStacks(2)
+
+set_of_stacks.push(1)
+set_of_stacks.push(2)
+set_of_stacks.push(5)
+set_of_stacks.push(8)
+set_of_stacks.push(3)
+set_of_stacks.push(12)
+
