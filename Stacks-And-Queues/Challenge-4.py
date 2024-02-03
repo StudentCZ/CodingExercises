@@ -12,3 +12,10 @@ class MyQueue:
       return self.stack_two.pop()
     else:
       return None
+  def show_queue(self):
+    print('stack_one', self.stack_one, 'stack_two', self.stack_two)
+
+queue = MyQueue()
+queue.enqueue(3)
+queue.enqueue(6)
+queue.enqueue(1)
