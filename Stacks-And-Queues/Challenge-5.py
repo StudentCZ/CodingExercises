@@ -11,3 +11,7 @@ def sort_stack(stack):
 
   while temp_stack:
     stack.append(temp_stack.pop())
+
+stack = [3,4,1,5,2]
+sort_stack(stack)
+print(stack)
