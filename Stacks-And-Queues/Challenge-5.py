@@ -20,3 +20,13 @@ class SortedStack:
   def __init__(self):
     self.stack = []
     self.temp_stack = []
+
+  def push(self,value):
+
+    while self.stack and self.stack[-1] < value:
+      self.temp_stack.append(self.stack.pop())
+
+    self.stack.append(value)
+
+    while self.temp_stack:
+      self.stack.append(self.temp_stack.pop())
