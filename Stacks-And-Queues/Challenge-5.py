@@ -15,3 +15,8 @@ def sort_stack(stack):
 stack = [3,4,1,5,2]
 sort_stack(stack)
 print(stack)
+
+class SortedStack:
+  def __init__(self):
+    self.stack = []
+    self.temp_stack = []
