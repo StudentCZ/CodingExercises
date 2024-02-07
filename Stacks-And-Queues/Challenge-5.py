@@ -30,3 +30,10 @@ class SortedStack:
 
     while self.temp_stack:
       self.stack.append(self.temp_stack.pop())
+
+  def pop(self):
+    if not self.is_empty():
+      return self.stack.pop()
+    else:
+      print("Stack is empty.")
+      return None
