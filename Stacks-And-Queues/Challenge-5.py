@@ -44,3 +44,6 @@ class SortedStack:
     else:
       print('Stack is empty.')
       return None
+
+  def is_empty(self):
+    return not bool(self.stack)
