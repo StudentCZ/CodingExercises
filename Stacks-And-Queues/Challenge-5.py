@@ -47,3 +47,6 @@ class SortedStack:
 
   def is_empty(self):
     return not bool(self.stack)
+
+  def display(self):
+    print(self.stack)
