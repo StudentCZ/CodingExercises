@@ -37,3 +37,10 @@ class SortedStack:
     else:
       print("Stack is empty.")
       return None
+
+  def peek(self):
+    if not self.is_empty():
+      return self.stack[-1]
+    else:
+      print('Stack is empty.')
+      return None
