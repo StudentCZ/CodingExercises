@@ -57,3 +57,5 @@ sorted_stack.push(1)
 sorted_stack.push(4)
 sorted_stack.push(2)
 sorted_stack.push(5)
+
+sorted_stack.display()
