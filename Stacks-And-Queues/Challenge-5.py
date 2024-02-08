@@ -50,3 +50,10 @@ class SortedStack:
 
   def display(self):
     print(self.stack)
+
+sorted_stack = SortedStack()
+sorted_stack.push(3)
+sorted_stack.push(1)
+sorted_stack.push(4)
+sorted_stack.push(2)
+sorted_stack.push(5)
