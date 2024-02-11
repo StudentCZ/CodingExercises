@@ -16,3 +16,17 @@ class AnimalShelter:
       self.cats.append(animal_data)
     else:
       raise ValueError("Invalid animal type. Use 'dog' or 'cat'.")
+
+  def dequeueAny(self):
+    if not self.dogs and not self.cats:
+      return None
+
+    if not self.dogs:
+      return self.cats.popleft()['animal']
+    elif not self.cats:
+      return self.dogs.popleft()['animal']
+
+    if self.dogs[0]['timestamp'] < self.cats[0]['timestamp']:
+      return self.dogs.popleft()['animal']
+    else:
+      return self.cats.popleft()['animal']
