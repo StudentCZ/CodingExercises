@@ -30,3 +30,8 @@ class AnimalShelter:
       return self.dogs.popleft()['animal']
     else:
       return self.cats.popleft()['animal']
+
+  def dequeueDog(self):
+    if not self.dogs:
+      return None
+    return self.dogs.popleft()['animal']
