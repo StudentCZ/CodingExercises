@@ -40,3 +40,10 @@ class AnimalShelter:
     if not self.cats:
       return None
     return self.cats.popleft('animal')
+
+shelter = AnimalShelter()
+
+shelter.enqueue('Sam', 'dog')
+shelter.enqueue('Alex', 'dog')
+shelter.enqueue('May', 'cat')
+shelter.enqueue('Love', 'cat')
