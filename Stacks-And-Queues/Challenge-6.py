@@ -47,3 +47,7 @@ shelter.enqueue('Sam', 'dog')
 shelter.enqueue('Alex', 'dog')
 shelter.enqueue('May', 'cat')
 shelter.enqueue('Love', 'cat')
+
+print(shelter.dequeueAny())
+print(shelter.dequeueCat())
+print(shelter.dequeueDog())
