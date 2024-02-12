@@ -39,7 +39,7 @@ class AnimalShelter:
   def dequeueCat(self):
     if not self.cats:
       return None
-    return self.cats.popleft('animal')
+    return self.cats.popleft()['animal']
 
 shelter = AnimalShelter()
 
